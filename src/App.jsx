@@ -1,21 +1,24 @@
-import catLogo from '/cat.png'
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Activation from './pages/Activation';
+import Question1 from './pages/Question1';
+import Question2 from './pages/Question2';
+import Question3 from './pages/Question3';
+import Question4 from './pages/Question4';
+import Question5 from './pages/Question5';
 
 function App() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-red-100 text-white">
-      <h1 className="text-5xl font-bold text-black">Purrsona</h1>
-      <img src={catLogo} className="h-35 p-6 transition duration-300 hover:drop-shadow-[0_0_2em_#ffe75eaa]" alt="Cat logo" />
-      
-      <div className="p-4 flex gap-4">
-        <button className="px-4 py-2 bg-pink-300 text-white font-medium rounded-lg hover:drop-shadow-[0_0_10px_#ff84c8aa] transition">
-          Start
-        </button>
-        <button className="px-4 py-2 bg-pink-300 text-white font-medium rounded-lg hover:drop-shadow-[0_0_10px_#ff84c8aa] transition">
-          Personalities
-        </button>
-      </div>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/activation" element={<Activation />} />
+      <Route path="/question-1" element={<Question1 />} />
+      <Route path="/question-2" element={<Question2 />} />
+      <Route path="/question-3" element={<Question3 />} />
+      <Route path="/question-4" element={<Question4 />} />
+      <Route path="/question-5" element={<Question5 />} />
+    </Routes>
   )
 }
 
-export default App
+export default App;
